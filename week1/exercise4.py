@@ -1,7 +1,0 @@
-from code import FindPattern
-import sys
-
-pattern = sys.stdin.readline()[:-1]
-sequence = sys.stdin.readline()[:-1]
-
-print(' '.join(map(str, FindPattern(sequence, pattern))))
