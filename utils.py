@@ -16,8 +16,8 @@ def HammingDistance(seq1, seq2):
     return sum(ch1 != ch2 for ch1, ch2 in zip(seq1, seq2))
 
 def ReverseComplement(sequence):
-	'Returns the reverse complement of a nucleotid sequence'
+    'Returns the reverse complement of a nucleotid sequence'
     return ''.join([nucleotid2complement[sequence[len(sequence)-i-1]] for i in range(len(sequence))])
 
 def seq2str(seq):
-	return ''.join(seq)
+    return ''.join(seq)

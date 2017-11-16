@@ -50,9 +50,9 @@ def profile_most_probable_kmer(dna, k, prof):
 def motifs_from_profile(profile, dna, k):
     return [profile_most_probable_kmer(seq,k,profile) for seq in dna]
 
-def randomized_motif_search(dna,k,t):
+def randomized_motif_search(dna_list,k,t):
     # Randomly generate k-mers from each sequence in the dna list.
-    rand_ints = [randint(0,len(dna[0])-k) for a in range(t)]
+    rand_ints = [randint(0,len(dna_list[0])-k) for a in range(t)]
     motifs = [dna_list[i][r:r+k] for i,r in enumerate(rand_ints)]
 
     # Initialize the best score as a score higher than the highest possible score.
